@@ -9,7 +9,8 @@ export class Content extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            isLoaded: false
+            isLoaded: false,
+            posts: ''
         }
     }
 
@@ -17,6 +18,7 @@ export class Content extends Component {
         setTimeout(()=>{
             this.setState({
                 isLoaded: true,
+                posts: "savedPosts"
             })
         }, 2000)
     }
@@ -27,6 +29,15 @@ export class Content extends Component {
                 
                 <div className={css.TitleBar}>
                     <h1>My Photos</h1>
+                    <form>
+                        <label>
+                            <input 
+                            onChange={(event) => }
+                            type="search" 
+                            id="searchInput" 
+                            placeholder="My Author"/>
+                        </label>
+                    </form>
                 </div>
 
                 <div className={css.SearchResults}>
